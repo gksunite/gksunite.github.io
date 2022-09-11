@@ -1,0 +1,6 @@
+.App{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: -webkit-radial-gradient(bottom, #14303d 12%,#3b5764 29%, #b5d4d9 54%, #c1dee4 64%)
+}

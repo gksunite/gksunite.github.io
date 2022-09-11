@@ -1,0 +1,218 @@
+:root {
+    --top-0: 0;
+    --top-50: 50%;
+	--red: #f16c38;
+	--blue: #29a5e3;
+	--green: #aced5b;
+	--yellow: #fecc51;
+	--purple: #ce5fd3;
+  }
+.map-container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+}
+.map-img-container{
+	min-height: 720px;
+    width: auto;
+    height: 100%;
+}
+.play-modal{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.purple-team-modal{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #5d28cae3;
+}
+.orange-team-modal{
+	position: fixed;
+	width: 100%;
+	height: 50%;
+	top: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #cc803de3;
+}
+.play-button-modal{
+	width: 33vw;
+	height: 6%;
+	border-radius: 3vh;
+	background-color: #ee7048;
+	color: #fffffd;
+	font-size: 3vh;
+	z-index: 1000;
+	max-width: 8em;
+}
+.play-button-modal:hover{
+	background-color: #ec683f;
+}
+.play-button-modal:active{
+	background-color: #e95f36;
+}
+.purple-chosen-pokemon{
+	margin: .4%;
+    width: 25%;
+    height: 70%;
+    background-color: #31146abd;
+	background-image: url(../img/square-pattern-30.svg),linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 38%);
+	background-size: 80px, auto;
+    background-position: center, left top;
+	border-radius: 3vh;
+	max-width: 292px;
+    max-height: 336px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.orange-chosen-pokemon{
+	margin: .4%;
+    width: 25%;
+    height: 70%;
+	background-color: #a65929db;
+	background-image: url(../img/square-pattern-30.svg),linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 38%);
+	background-size: 80px, auto;
+    background-position: center, left top;
+	border-radius: 3vh;
+	max-width: 292px;
+    max-height: 336px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.choose-pokemon{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	top: var(--top);
+	left: 0;
+	background-color: rgb(0, 1, 48);
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+}
+.mid-modal-thing{
+    position: fixed;
+    background-color: rgb(0 1 48);
+	border-radius: 3vw;
+    top: 47vh;
+    width: 24vh;
+    height: 6%;
+}
+.show-all-pokemon{
+	display: inline-flex;
+	width: 72%;
+	flex-wrap: wrap;
+	margin: 3%;
+	overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+	min-height: 110px;
+}
+.every-pokemon-shown{
+	width: 9vh;
+    height: 9vh;
+	margin: .7%;
+	background-color: var(--color);
+	background-image: url(../img/square-pattern-30.svg),linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 38%);
+	background-size: 70px, auto;
+    background-position: center, left top;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20%;
+}
+.pokemon-image{
+	width: auto;
+	height: 113%;
+}
+.chosen-pokemon-team{
+	height: 100%;
+	background-color: var(--color);
+}
+.object-container{
+	position: absolute;
+    width: 4vh;
+    height: 4vh;
+    border-radius: 20%;
+    background-color: #29a5e3;
+	overflow: hidden;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.object-container-container{
+	position: absolute;
+	background: linear-gradient(315deg, #53aefe, #b8f4fc);
+	width: 4.75vh;
+	height: 4.75vh;
+	border-radius: 30%;
+	rotate: 45deg;
+	border: .2vh solid #aaa9a7;
+	margin-top: 20vh;
+	margin-left: 0;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.every-object-shown{
+	width: 9vh;
+    height: 9vh;
+	margin: 2%;
+	background-color: var(--color);
+	background-image: url(../img/square-pattern-30.svg),linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 38%);
+	background-size: 70px, auto;
+    background-position: center, left top;
+	rotate: 45deg;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20%;
+}
+.object-image{
+	width: auto;
+	height: 113%;
+	rotate: -45deg;
+}
+@keyframes openModal1 {
+	from{
+		top: 0;
+	}
+	to{
+		top: -50%;
+	}
+}
+@keyframes openModal2 {
+	from{
+		top: 50%;
+	}
+	to{
+		top: 110%;
+	}
+}
+@keyframes openModal3 {
+	from{
+		margin-top: 0;
+	}
+	to{
+		margin-top: 120vh;
+	}
+}
